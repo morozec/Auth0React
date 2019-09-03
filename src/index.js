@@ -10,7 +10,9 @@ async function initAuth0() {
     const auth0 = await createAuth0Client({
         domain: 'morozec.auth0.com',
         client_id: 'c56Pm3348co0jt72HPrCij9pR5DU7YKl',
-        redirect_uri: 'http://localhost:3000/profile'
+        redirect_uri: 'http://localhost:3000/profile',
+        scope:'openid profile user_metadata https://morozec.auth0.com/user_metadata',
+        
     })
     return auth0
 }

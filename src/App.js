@@ -17,14 +17,13 @@ function App(props) {
     await auth0.loginWithRedirect()
   }
 
-  const  logout = async () => {
-    await auth0.logout()
-  }
+  
+
 
   return (
     <div className="App">
       <button onClick={login}>Login</button>
-      <button onClick={logout}>Logout</button>
+     
     </div>
   );
 }
