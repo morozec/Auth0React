@@ -15,11 +15,7 @@ const Profile = (props) => {
         const user = await auth0.getUser();
         console.log(user);
         setUserName(user.name)
-        setUserSub(user.sub)
-
-        const claims = await auth0.getIdTokenClaims()
-
-        console.log(claims)
+        setUserSub(user.sub)  
     }
 
     //in your callback route (<MY_CALLBACK_URL>)
